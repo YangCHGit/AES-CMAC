@@ -55,5 +55,14 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "files.associations": {
+    "cmac.h": "c",
+    "aes_types.h": "c",
+    "aes_utils.h": "c",
+    "aes_sbox.h": "c",
+    "aes_core.h": "c",
+    "aes_key_expansion.h": "c",
+    "aes_shift_rows.h": "c"
+}
 }
