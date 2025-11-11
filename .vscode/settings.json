@@ -63,6 +63,8 @@
     "aes_sbox.h": "c",
     "aes_core.h": "c",
     "aes_key_expansion.h": "c",
-    "aes_shift_rows.h": "c"
+    "aes_shift_rows.h": "c",
+    "aes_mix_columns.h": "c",
+    "stdint.h": "c"
 }
 }

@@ -38,19 +38,19 @@ static void generate_subkeys(const uint8_t *key, uint8_t *k1, uint8_t *k2)
     // Expand key
     key_expansion(key, round_keys);
 
-    // Encrypt zero block to get L
+    // Encrypt zero block to get L  加密aes(key, 0)得到L
     aes_encrypt(l, l, round_keys);
 
     // Generate K1
     left_shift_one_bit(l, k1);
-    if (l[0] & 0x80)
+    if (l[0] & 0x80) // If MSB of L is 1, XOR with Rb
     {
         xor_blocks(k1, const_Rb, k1);
     }
 
     // Generate K2
     left_shift_one_bit(k1, k2);
-    if (k1[0] & 0x80)
+    if (k1[0] & 0x80) // If MSB of K1 is 1, XOR with Rb
     {
         xor_blocks(k2, const_Rb, k2);
     }
