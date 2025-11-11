@@ -5,9 +5,12 @@
 #include "aes_mix_columns.h"
 #include "aes_key_expansion.h"
 
-static void add_round_key(state_t state, const uint8_t *round_key) {
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
+static void add_round_key(state_t state, const uint8_t *round_key)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
             state[i][j] ^= round_key[i + j * 4];
         }
     }
